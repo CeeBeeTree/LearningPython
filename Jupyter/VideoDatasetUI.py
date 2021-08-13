@@ -86,6 +86,7 @@ class VideoDatasetUI:
         video_list_dropdown.observe(on_video_list_dropdown_value_change, names='value')
 
         def on_slider_value_change(change):
+            print(change)
             frame_number = change['new']
             imageArea.value = self.__dataset.video_frame(self.__video_selected_ref, frame_number)
  
